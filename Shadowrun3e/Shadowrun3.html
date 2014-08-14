@@ -1,0 +1,294 @@
+<div class="sheet-wrapper">
+
+<!-- Sheet Header: Name, Logo etc. -->
+<div class="sheet-2colrow">
+    <div class="sheet-col">
+        <div class="sheet-row sheet-hugeinput"><input type="text" name="attr_name" /><label>Name</label></div>
+        <div class="sheet-row sheet-hugeinput sheet-race"><input type="text" name="attr_race" /><label>Race</label></div>
+        <div class="sheet-row sheet-hugeinput sheet-sex"><input type="text" name="attr_sex" /><label>Sex</label></div>
+        <div class="sheet-row sheet-hugeinput sheet-age"><input type="text" name="attr_age" /><label>Age</label></div>
+    </div>
+    <div class="sheet-col sheet-logo">
+        <div class="sheet-logotext">Character Record Sheet</div>
+        <img src="http://i.imgur.com/hra8whO.png" />
+    </div>
+</div>
+<div class="sheet-hugeinput sheet-description"><input type="text" name="attr_description" /><label>Description</label></div>
+<div class="sheet-hugeinput sheet-notes"><input type="text" name="attr_notes" /><label>Notes</label></div>
+
+<!-- Attributes -->
+<div class="sheet-box sheet-thirtyone">
+    <h3>Attributes</h3>
+    <div class="sheet-boxcont">
+        <div class="sheet-attributes">
+            <label>Body<input type="text" name="attr_body" /></label>
+            <label>Quickness<input type="text" name="attr_quickness" /></label>
+            <label>Strength<input type="text" name="attr_strength" /></label>
+            <label>Charisma<input type="text" name="attr_charisma" /></label>
+            <label>Intelligence<input type="text" name="attr_intelligence" /></label>
+            <label>Willpower<input type="text" name="attr_willpower" /></label>
+            <label>Essence<input type="text" name="attr_essence" /></label>
+            <label>(Magic)<input type="text" name="attr_magic" /></label>
+        </div>
+        <div class="sheet-reacinit">
+            <label>
+                Reaction (<input type="text" name="attr_reactionbase" value="floor([[@{quickness}+@{intelligence}]]/2)" disabled="true" />) <br />
+                <input type="text" name="attr_reaction" />
+            </label>
+            <label>
+                Initiative <br />
+                <input type="text" name="attr_initiative" />
+            </label>
+            <div class="sheet-nowrap">
+                + <input type="text" name="attr_initiativedice" />
+                <button class="sheet-diceroll" type='roll' value='/r [Initiative] (@{initiative}-[[@{stunone}+@{stunthree}+@{stunsix}]]-[[@{woundone}+@{woundthree}+@{woundsix}]])+@{initiativedice}d6 &{tracker}' name='roll_initiativeCheck'>d6</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Condition Monitor -->
+<div class="sheet-box sheet-fiftysix">
+    <h3>Condition Monitor</h3>
+    <div class="sheet-boxcont">
+        <div class="sheet-conditioncontainer">
+            <div class="sheet-conditiontitles">
+                Stun <br />
+                Physical
+            </div>
+            <div class="sheet-conditiondata">
+                <div class="sheet-conditionlabels"><div>Light Stun*</div><div>Moderate Stun*</div><div>Serious Stun*</div><div>Deadly Stun</div></div>
+                <div class="sheet-conditionboxes sheet-stuns">
+                    <label>
+                        <input type="checkbox" name="attr_stunone" value="1" checked="true" />
+                        <div> +1 TN # <br /> -1 Init. </div>
+                    </label>
+                    <label><input type="checkbox" name="attr_stuntwo" value="1" /><div></div></label>
+                    <label>
+                        <input type="checkbox" name="attr_stunthree" value="1" checked="true" />
+                        <div> +2 TN # <br /> -2 Init. </div>
+                    </label>
+                    <label><input type="checkbox" name="attr_stunfour" value="1" /><div></div></label>
+                    <label><input type="checkbox" name="attr_stunfive" value="1" /><div></div></label>
+                    <label>
+                        <input type="checkbox" name="attr_stunsix" value="1" checked="true" />
+                        <div> +3 TN # <br /> -3 Init. </div>
+                    </label>
+                    <label><input type="checkbox" name="attr_stunseven" value="1" /><div></div></label>
+                    <label><input type="checkbox" name="attr_stuneight" value="1" /><div></div></label>
+                    <label><input type="checkbox" name="attr_stunnine" value="1" /><div></div></label>
+                    <label>
+                        <input type="checkbox" name="attr_stunten" value="1" />
+                        <div> Unc. </div>
+                    </label>
+                </div>
+                <div class="sheet-conditionlinkone"></div>
+                <div class="sheet-conditionlinktwo"></div>
+                <div class="sheet-conditionboxes sheet-wounds">
+                    <label>
+                        <input type="checkbox" name="attr_woundone" value="1" checked="true" />
+                        <div> +1 TN # <br /> -1 Init. </div>
+                    </label>
+                    <label><input type="checkbox" name="attr_woundtwo" value="1" /><div></div></label>
+                    <label>
+                        <input type="checkbox" name="attr_woundthree" value="1" checked="true" />
+                        <div> +2 TN # <br /> -2 Init. </div>
+                    </label>
+                    <label><input type="checkbox" name="attr_woundfour" value="1" /><div></div></label>
+                    <label><input type="checkbox" name="attr_woundfive" value="1" /><div></div></label>
+                    <label>
+                        <input type="checkbox" name="attr_woundsix" value="1" checked="true" />
+                        <div> +3 TN # <br /> -3 Init. </div>
+                    </label>
+                    <label><input type="checkbox" name="attr_woundseven" value="1" /><div></div></label>
+                    <label><input type="checkbox" name="attr_woundeight" value="1" /><div></div></label>
+                    <label><input type="checkbox" name="attr_woundnine" value="1" /><div></div></label>
+                    <label>
+                        <input type="checkbox" name="attr_woundten" value="1" />
+                        <div> Unc. Maybe Dead </div>
+                    </label>
+                </div>
+                <div class="sheet-conditionlabels"><div>Light Wound*</div><div>Moderate Wound*</div><div>Serious Wound*</div><div>Deadly Wound</div></div>
+                <label class="sheet-overflow">
+                    Physical Damage Overflow
+                    <input type="text" name="attr_overflow" />
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Karma -->
+<div class="sheet-box sheet-thirteen">
+    <h3>Karma</h3>
+    <div class="sheet-boxcont sheet-karma">
+        <label>
+            Karma Pool
+            <input type="text" name="attr_karmapool" />
+        </label>
+        <label>
+            Good Karma
+            <input type="text" name="attr_goodkarma" />
+        </label>
+    </div>
+</div>
+
+<!-- Skills -->
+<div class="sheet-box sheet-forty">
+    <h3>Skills</h3>
+    <div class="sheet-boxcont">
+        <div class="sheet-ratingslhs">Name</div>
+        <div class="sheet-ratingsrhs">Rating</div>
+        <fieldset class="repeating_skills">
+            <div class="sheet-ratingslhs"><input type="text" name="attr_skillname" /></div>
+            <div class="sheet-ratingsrhs"><input type="text" name="attr_skillrating" /></div>
+        </fieldset>
+    </div>
+</div>
+
+<!-- Dice Pools, Aromor/Gear -->
+<div class="sheet-twenty">
+    <div class="sheet-box">
+        <h3>Dice Pools</h3>
+        <div class="sheet-boxcont sheet-dicepool">
+            <label> Combat Pool <input type="text" name="attr_combatpool" /> </label> <br />
+            <input type="text" name="attr_pooltypeone" /> <label>Pool <input type="text" name="attr_poolone" /></label> <br />
+            <input type="text" name="attr_pooltypetwo" /> <label>Pool <input type="text" name="attr_pooltwo" /></label> <br />
+            <input type="text" name="attr_pooltypethree" /> <label>Pool <input type="text" name="attr_poolthree" /></label> <br />
+        </div>
+    </div>
+    <div class="sheet-box">
+        <h3>Armor/Gear</h3>
+        <div class="sheet-boxcont">
+            <div class="sheet-ratingslhs" style="width:auto">Type</div>
+            <div class="sheet-ratingsrhs" style="width:auto">Rating</div>
+            <fieldset class="repeating_armors">
+                <div class="sheet-ratingslhs"><input type="text" name="attr_armorname" /></div>
+                <div class="sheet-ratingsrhs"><input type="text" name="attr_armorrating" /></div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+<!-- Cyberware, Spells -->
+<div class="sheet-fortyrhs">
+    <div class="sheet-box">
+        <h3>Cyberware</h3>
+        <div class="sheet-boxcont">
+            <div class="sheet-ratingslhs">Type</div>
+            <div class="sheet-ratingsrhs">Rating</div>
+            <fieldset class="repeating_cyberwares">
+                <div class="sheet-ratingslhs"><input type="text" name="attr_cyberwarename" /></div>
+                <div class="sheet-ratingsrhs"><input type="text" name="attr_cyberwarerating" /></div>
+            </fieldset>
+        </div>
+    </div>
+    <div class="sheet-box">
+        <h3>Spells</h3>
+        <div class="sheet-boxcont">
+            <div class="sheet-ratingslhs sheet-short">Name</div>
+            <div class="sheet-ratingsrhs">Drain</div> <!-- FLOAT: RIGHT -->
+            <div class="sheet-ratingsrhs">Force</div>
+            <fieldset class="repeating_spells">
+                <div class="sheet-ratingslhs sheet-short"><input type="text" name="attr_spellname" /></div>
+                <div class="sheet-ratingsrhs"><input type="text" name="attr_spelldrain" /></div>
+                <div class="sheet-ratingsrhs"><input type="text" name="attr_spellforce" /></div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+<!-- Weapons -->
+<div class="sheet-box sheet-weapons">
+    <h3>Weapons</h3>
+    <div class="sheet-boxcont">
+        <div class="sheet-wide">Name</div>
+        <div class="sheet-narrow">Type</div>
+        <div class="sheet-mediumwide">Concealability</div>
+        <div class="sheet-narrow">Reach</div>
+        <div class="sheet-narrow">Mode</div>
+        <div class="sheet-mediumnarrow">Ammo</div>
+        <div class="sheet-narrow">Short</div>
+        <div class="sheet-mediumnarrow">Medium</div>
+        <div class="sheet-narrow">Long</div>
+        <div class="sheet-mediumnarrow">Extreme</div>
+        <div class="sheet-mediumnarrow">Damage</div>
+        <div class="sheet-mediumwide" style="margin-right: 0px;">Modifiers</div>
+        <fieldset class="repeating_weapons">
+            <div class="sheet-wide"><input type="text" name="attr_weaponname" /></div>
+            <div class="sheet-narrow"><input type="text" name="attr_weapontype" /></div>
+            <div class="sheet-mediumwide"><input type="text" name="attr_weaponconc" /></div>
+            <div class="sheet-narrow"><input type="text" name="attr_weaponreach" /></div>
+            <div class="sheet-narrow"><input type="text" name="attr_weaponmode" /></div>
+            <div class="sheet-mediumnarrow"><input type="text" name="attr_weaponammo" /></div>
+            <div class="sheet-narrow"><input type="text" name="attr_weaponshort" /></div>
+            <div class="sheet-mediumnarrow"><input type="text" name="attr_weaponmedium" /></div>
+            <div class="sheet-narrow"><input type="text" name="attr_weaponlong" /></div>
+            <div class="sheet-mediumnarrow"><input type="text" name="attr_weaponextreme" /></div>
+            <div class="sheet-mediumnarrow"><input type="text" name="attr_weapondamage" /></div>
+            <div class="sheet-mediumwide" style="margin-right: 0px;"><input type="text" name="attr_weaponmodifiers" /></div>
+        </fieldset>
+    </div>
+</div>
+
+<!-- Equipment & Gear, Contact & Information -->
+<div class="sheet-2colrow sheet-boxes">
+    <div class="sheet-col">
+        <div class="sheet-box">
+            <h3>Equipment & Gear</h3>
+            <div class="sheet-boxcont"><textarea name="attr_equipment"></textarea></div>
+        </div>
+    </div>
+    <div class="sheet-col sheet-lastcol">
+        <div class="sheet-box">
+            <h3>Contact & Information</h3>
+            <div class="sheet-boxcont"><textarea name="attr_contact"></textarea></div>
+        </div>
+    </div>
+</div>
+
+<!-- Character notes, Vehicle -->
+<div class="sheet-2colrow sheet-boxes">
+    <div class="sheet-col sheet-forty">
+        <div class="sheet-box">
+            <h3>Character Notes</h3>
+            <div class="sheet-boxcont"><textarea name="attr_characternotes"></textarea></div>
+        </div>
+    </div>
+    <div class="sheet-col sheet-lastcol sheet-sixty">
+        <div class="sheet-box">
+            <h3>Vehicle</h3>
+            <div class="sheet-boxcont sheet-vehicle">
+                <div class="sheet-attributes">
+                    <label class="sheet-vtype">Type<input type="text" name="attr_vtype" /></label>
+                    <label>Handling<input type="text" name="attr_vhandling" /></label>
+                    <label>Speed<input type="text" name="attr_vspeed" /></label>
+                    <label>Body<input type="text" name="attr_vbody" /></label>
+                    <label>Armor<input type="text" name="attr_varmor" /></label>
+                    <label>Signature<input type="text" name="attr_vsignature" /></label>
+                    <label>Autopilot<input type="text" name="attr_vautopilot" /></label>
+                    <label>Firmpoints<input type="text" name="attr_vfirmpoints" /></label>
+                    <label>Hardpoints<input type="text" name="attr_vhardpoints" /></label>
+                </div>
+                <div class="sheet-conditiondata">
+                    <div class="sheet-conditionlabels"><div>Light Damage</div><div>Moderate Damage</div><div>Serious Damage</div><div>Destroyed</div></div>
+                    <div class="sheet-conditionboxes sheet-damages">
+                        <label><input type="checkbox" name="attr_damageone" value="1" /><div></div></label>
+                        <label><input type="checkbox" name="attr_damagetwo" value="1" /><div></div></label>
+                        <label><input type="checkbox" name="attr_damagethree" value="1" /><div></div></label>
+                        <label><input type="checkbox" name="attr_damagefour" value="1" /><div></div></label>
+                        <label><input type="checkbox" name="attr_damagefive" value="1" /><div></div></label>
+                        <label><input type="checkbox" name="attr_damagesix" value="1" /><div></div></label>
+                        <label><input type="checkbox" name="attr_damageseven" value="1" /><div></div></label>
+                        <label><input type="checkbox" name="attr_damageeight" value="1" /><div></div></label>
+                        <label><input type="checkbox" name="attr_damagenine" value="1" /><div></div></label>
+                        <label><input type="checkbox" name="attr_damageten" value="1" /><div></div></label>
+                    </div>
+                    <div class="sheet-hugeinput sheet-vnotes"><textarea name="attr_vnotes"></textarea><label>Notes</label></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="clear: both;font-weight: normal;">*Please uncheck these values before use.</div>
+</div>

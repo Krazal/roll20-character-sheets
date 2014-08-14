@@ -1,0 +1,489 @@
+/* CSS Reset */{}
+.charsheet .sheet-wrapper {
+    font-family: Palatino Linotype, Book Antiqua, Times New Roman;
+    font-weight: bold !important;
+    background: url("http://i.imgur.com/RTfuCPK.png") repeat scroll left top transparent;
+    min-width: 760px;
+}
+.charsheet .sheet-wrapper textarea {
+    margin: 0;
+    min-height: 207px;
+    height: 207px;
+    line-height: 14px !important;
+    max-width: calc(100% - 10px);
+    min-width: calc(100% - 10px);
+    width: calc(100% - 10px);
+    text-align: left !important;
+    font-size: 12px !important;
+    padding: 4px !important;
+}
+.charsheet .sheet-wrapper label {
+    display: inline-block;
+    font-weight: bold;
+}
+.charsheet .sheet-wrapper button {
+    font-size: 14px !important;
+    padding: 1px 7px !important;
+    border: 1px solid #a2a2a2;
+    background: #eeeeee;
+    background: -moz-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc));
+    background: -webkit-linear-gradient(top, #eeeeee 0%,#cccccc 100%);
+    background: -o-linear-gradient(top, #eeeeee 0%,#cccccc 100%);
+    background: -ms-linear-gradient(top, #eeeeee 0%,#cccccc 100%);
+    background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.charsheet .sheet-wrapper button:hover {
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #e3e3e3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e3e3e3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e3e3e3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#e3e3e3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#e3e3e3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#e3e3e3 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e3e3e3',GradientType=0 );
+}
+.charsheet .sheet-wrapper button:before {
+    content: "" !important;
+}
+.charsheet .sheet-wrapper button label {
+    display: inline-block;
+    margin-bottom: 0;
+}
+.charsheet .sheet-wrapper .sheet-nowrap {
+    white-space: nowrap;
+}
+.charsheet .sheet-wrapper .sheet-2colrow .sheet-col {
+    margin-right: 2px !important;
+    width: calc(50% - 5px) !important;
+}
+
+/* Logo */
+.charsheet .sheet-wrapper .sheet-logo .sheet-logotext {
+    float: right;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 14px 24px -19px 0;
+    text-transform: uppercase;
+}
+.charsheet .sheet-wrapper .sheet-logo img {
+    float: right;
+    margin: -16px 10px 0 0;
+    width: 25vw;
+    max-width: 340px;
+}
+
+/* Name, race etc. */
+.charsheet .sheet-wrapper .sheet-hugeinput input,
+.charsheet .sheet-wrapper .sheet-hugeinput textarea {
+    padding: 7px 0 7px 63px;
+    font-size: 18px;
+    line-height: 22px;
+    width: 100%;
+    border: 2px solid #000;
+    margin-bottom: 7px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.charsheet .sheet-wrapper .sheet-hugeinput label {
+    display: block;
+    width: auto;
+    margin: -25px 0 0;
+    background-color: #000;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 0 11px;
+    position: absolute;
+    text-transform: uppercase;
+}
+.charsheet .sheet-wrapper .sheet-hugeinput.sheet-race,
+.charsheet .sheet-wrapper .sheet-hugeinput.sheet-sex,
+.charsheet .sheet-wrapper .sheet-hugeinput.sheet-age {
+    display: inline-block;
+    margin-right: 5px;
+    width: calc(50% - 7px);
+}
+.charsheet .sheet-wrapper .sheet-hugeinput.sheet-sex {
+    width: calc(25% - 7px);
+}
+.charsheet .sheet-wrapper .sheet-hugeinput.sheet-age {
+    margin-right: 0;
+    width: calc(25% - 3px);
+}
+.charsheet .sheet-wrapper .sheet-hugeinput.sheet-race input { padding-left: 58px; }
+.charsheet .sheet-wrapper .sheet-hugeinput.sheet-sex input{ padding-left: 47px; }
+.charsheet .sheet-wrapper .sheet-hugeinput.sheet-age input { padding-left: 51px; }
+.charsheet .sheet-wrapper .sheet-hugeinput.sheet-description input { padding-left: 106px; }
+.charsheet .sheet-wrapper .sheet-hugeinput.sheet-notes input { padding-left: 66px; }
+
+/* Box sizes */
+.charsheet .sheet-wrapper .sheet-box {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    border: 2px solid #000;
+    margin: 0 4px 7px 0;
+}
+.charsheet .sheet-wrapper .sheet-box > h3 {
+    padding-left: 9px;
+    margin: 0;
+    font-size: 14px;
+    text-align: left;
+    line-height: 22px;
+    color: #fff;
+    background-color: #000;
+    text-transform: uppercase;
+}
+.charsheet .sheet-wrapper .sheet-boxcont {
+    padding: 2px;
+}
+
+/* Attributes */
+.charsheet .sheet-wrapper .sheet-attributes,
+.charsheet .sheet-wrapper .sheet-reacinit {
+    display: inline-block;
+}
+.charsheet .sheet-wrapper .sheet-attributes {
+    width: 55%;
+}
+.charsheet .sheet-wrapper .sheet-attributes label {
+    display: inline-block;
+    margin: 0;
+    font-size: 13px;
+    text-align: right;
+    width: 100%;
+    padding-right: 0;
+}
+.charsheet .sheet-wrapper .sheet-attributes input {
+    line-height: 16px;
+    margin: 1px 8px 1px 7px;
+    padding: 2px;
+    vertical-align: 0;
+    width: 35px;
+}
+.charsheet .sheet-wrapper .sheet-reacinit label {
+    display: block;
+    width: auto;
+    margin: 5px 0 0;
+    text-align: left;
+    padding-right: 0;
+}
+.charsheet .sheet-wrapper .sheet-reacinit label input,
+.charsheet .sheet-wrapper .sheet-karma label input {
+    display: inline-block;
+    font-size: 30px;
+    height: 50px;
+    width: 84px;
+}
+.charsheet .sheet-wrapper .sheet-reacinit input {
+    height: 23px;
+    margin-top: 2px;
+    margin-bottom: 3px;
+    width: 33px;
+}
+.charsheet .sheet-wrapper .sheet-reacinit input[disabled] {
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 13px;
+    height: 16px;
+    text-align: center;
+    vertical-align: 0;
+    font-size: 12px;
+    font-family: Palatino Linotype, Book Antiqua, Times New Roman;
+    font-weight: bold;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+/* Condition Monitor */
+.charsheet .sheet-wrapper .sheet-conditioncontainer {
+    display: inline-block;
+}
+.charsheet .sheet-wrapper .sheet-conditiontitles {
+    position: absolute;
+    padding: 18px 0 0 2px;
+    line-height: 49px;
+    text-align: right;
+    font-size: 16px;
+}
+.charsheet .sheet-wrapper .sheet-conditiondata {
+    display: inline-block;
+    margin-left: 79px;
+}
+.charsheet .sheet-wrapper .sheet-conditionlabels {
+    text-align: left;
+    font-size: 11px;
+    margin-left: -21px;
+    margin-top: 2px;
+}
+.charsheet .sheet-wrapper .sheet-conditionlabels div {
+    display: inline-block;
+    width: 60px;
+    line-height: 12px;
+    text-align: center;
+}
+.charsheet .sheet-wrapper .sheet-conditionlabels div:nth-child(2) { margin-left: 7px; }
+.charsheet .sheet-wrapper .sheet-conditionlabels div:nth-child(3) { margin-left: 36px; }
+.charsheet .sheet-wrapper .sheet-conditionlabels div:nth-child(4) { position: relative; left: 69px; }
+.charsheet .sheet-wrapper .sheet-conditionboxes {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+.charsheet .sheet-wrapper .sheet-conditionboxes.sheet-wounds {
+    margin: 14px 0 0 0;
+}
+.charsheet .sheet-wrapper .sheet-conditionboxes input {
+    display: none;
+}
+.charsheet .sheet-wrapper .sheet-conditionboxes label {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+.charsheet .sheet-wrapper .sheet-conditionboxes label div {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-left: -5px;
+    line-height: 15px;
+    font-size: 9px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-right-color: transparent; /* solve some border-width problem */
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.charsheet .sheet-wrapper .sheet-conditionboxes input:checked + div {
+    background: #f2825b;
+    background: -moz-linear-gradient(top,  #f2825b 0%, #e55b2b 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2825b), color-stop(100%,#e55b2b));
+    background: -webkit-linear-gradient(top,  #f2825b 0%,#e55b2b 100%);
+    background: -o-linear-gradient(top,  #f2825b 0%,#e55b2b 100%);
+    background: -ms-linear-gradient(top,  #f2825b 0%,#e55b2b 100%);
+    background: linear-gradient(to bottom,  #f2825b 0%,#e55b2b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2825b', endColorstr='#e55b2b',GradientType=0 );
+    color: #fff;
+    border-right-color: #000;
+}
+.charsheet .sheet-wrapper .sheet-conditionboxes.sheet-wounds input:checked + div {
+    background: #ff3019;
+    background: -moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404));
+    background: -webkit-linear-gradient(top,  #ff3019 0%,#cf0404 100%);
+    background: -o-linear-gradient(top,  #ff3019 0%,#cf0404 100%);
+    background: -ms-linear-gradient(top,  #ff3019 0%,#cf0404 100%);
+    background: linear-gradient(to bottom,  #ff3019 0%,#cf0404 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 );
+}
+.charsheet .sheet-wrapper .sheet-conditionboxes label:last-child div {
+    border-right-color: #000;
+}
+.charsheet .sheet-wrapper .sheet-conditionboxes label:last-child div {
+    text-align: center;
+    line-height: 30px;
+}
+.charsheet .sheet-wrapper .sheet-conditionboxes.sheet-wounds label:last-child div {
+    line-height: 11px;
+    white-space: normal;
+}
+.charsheet .sheet-wrapper .sheet-conditionlinkone,
+.charsheet .sheet-wrapper .sheet-conditionlinktwo {
+    position: absolute;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000 #000 #000 transparent;
+    height: 23px;
+    margin: -29px 0 0 22px;
+    width: 300px;
+}
+.charsheet .sheet-wrapper .sheet-conditionlinktwo {
+    border-color: #000 transparent #000 #000;
+    margin: -4px 0 0 -12px;
+}
+.charsheet .sheet-wrapper .sheet-overflow {
+    width: 100%;
+    padding-top: 16px;
+    text-align: center;
+    font-size: 18px;
+}
+.charsheet .sheet-wrapper .sheet-overflow input {
+    font-size: 18px;
+    vertical-align: -1px;
+    margin-left: 5px;
+    width: 50px;
+}
+
+/* Karma */
+.charsheet .sheet-wrapper .sheet-karma {
+    text-align: center;
+    padding: 10px 2px 7px;
+}
+.charsheet .sheet-wrapper .sheet-karma label {
+    display: inline-block;
+    line-height: 22px;
+    margin: 6px 0 0 0;
+    text-align: left;
+    width: 84px;
+    font-size: 14px;
+}
+
+/* Skills, Cyberware, Armor/Gear, Spells */
+.charsheet .sheet-wrapper .sheet-ratingslhs,
+.charsheet .sheet-wrapper .sheet-ratingsrhs {
+    display: inline-block;
+}
+.charsheet .sheet-wrapper .sheet-ratingslhs {
+    width: calc(80% - 4px);
+}
+.charsheet .sheet-wrapper .sheet-ratingslhs.sheet-short {
+    width: calc(60% - 4px);
+}
+.charsheet .sheet-wrapper .sheet-ratingsrhs {
+    width: 19%;
+    float: right;
+    margin-left: 2px;
+    text-align: center;
+}
+.charsheet .sheet-wrapper .sheet-ratingslhs input,
+.charsheet .sheet-wrapper .sheet-ratingsrhs input {
+    width: 100%;
+    margin: 1px 0 1px;
+}
+
+/* Dice Pools */
+.charsheet .sheet-wrapper .sheet-dicepool {
+    text-align: center;
+    margin: 5px 0 5px;
+}
+.charsheet .sheet-wrapper .sheet-dicepool label {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+.charsheet .sheet-wrapper .sheet-dicepool input {
+    font-size: 11px;
+    width: 51px;
+}
+.charsheet .sheet-wrapper .sheet-dicepool label input {
+    font-size: 12px;
+    margin: 1px 0 1px;
+    width: 50px;
+}
+
+/* Weapons */
+.charsheet .sheet-wrapper .sheet-weapons {
+    display: block;
+    margin-right: 0;
+    width: auto;
+    text-align: center;
+}
+.charsheet .sheet-wrapper .sheet-weapons input {
+    width: 100%;
+    margin: 1px 0;
+}
+.charsheet .sheet-wrapper .sheet-weapons .sheet-boxcont div {
+    text-align: left;
+    display: inline-block;
+}
+.charsheet .sheet-wrapper .sheet-wide {
+    width: calc(16.4% - 2px);
+}
+.charsheet .sheet-wrapper .sheet-mediumwide {
+    width: calc(12% - 2px);
+}
+.charsheet .sheet-wrapper .sheet-mediumnarrow {
+    width: calc(7% - 2px);
+}
+.charsheet .sheet-wrapper .sheet-narrow {
+    width: calc(6% - 2px);
+}
+
+/* Equipment & Gear, Contact & Information */
+.charsheet .sheet-wrapper .sheet-2colrow.sheet-boxes .sheet-col {
+    width: calc(50% - 8px) !important;
+    margin-right: 5px !important;
+}
+.charsheet .sheet-wrapper .sheet-2colrow.sheet-boxes .sheet-lastcol {
+    margin: 0 0 0 4px !important;
+}
+.charsheet .sheet-wrapper .sheet-2colrow.sheet-boxes .sheet-lastcol .sheet-box {
+    margin-right: 0;
+}
+
+/* Character Notes, Vehicle */
+.charsheet .sheet-wrapper .sheet-vtype input {
+    width: 361px;
+    margin-right: -312px;
+}
+.charsheet .sheet-wrapper .sheet-vehicle .sheet-attributes {
+    width: 30%;
+}
+.charsheet .sheet-wrapper .sheet-vehicle .sheet-conditiondata {
+    margin: 40px 0 0 15px;
+    vertical-align: top;
+}
+.charsheet .sheet-wrapper .sheet-vehicle .sheet-conditionlabels div:after {
+    display: block;
+    content: "";
+    margin: 2px auto;
+    width: 0;
+    height: 7px;
+    border: 1px solid #000;
+}
+.charsheet .sheet-wrapper .sheet-vehicle .sheet-conditionlabels div:nth-child(2) { margin-left: -3px; }
+.charsheet .sheet-wrapper .sheet-vehicle .sheet-conditionlabels div:nth-child(3) { margin-left: 25px; }
+.charsheet .sheet-wrapper .sheet-vehicle .sheet-conditionlabels div:nth-child(4) { position: relative; left: 52px; }
+.charsheet .sheet-wrapper .sheet-vehicle .sheet-conditionboxes label div {
+    width: 28px;
+    height: 28px;
+}
+.charsheet .sheet-wrapper .sheet-vnotes {
+    width: 301px;
+    margin-left: -10px;
+    text-align: left;
+}
+.charsheet .sheet-wrapper .sheet-vnotes textarea {
+    min-height: 30px;
+    max-height: 74px;
+    padding-bottom: 16px !important;
+    margin-bottom: 0px;
+}
+.charsheet .sheet-wrapper .sheet-vnotes label {
+    margin: -19px 0 0;
+}
+
+/* Sheet width values */
+.charsheet .sheet-wrapper .sheet-thirtyone { width: calc(31% - 9px); }
+.charsheet .sheet-wrapper .sheet-fiftysix { width: calc(56% - 9px); min-height: 221px; text-align: center; }
+.charsheet .sheet-wrapper .sheet-thirteen { width: calc(13% - 9px); min-height: 221px; margin-right: 0; }
+.charsheet .sheet-wrapper .sheet-forty,
+.charsheet .sheet-wrapper .sheet-2colrow.sheet-boxes .sheet-col.sheet-forty,
+.charsheet .sheet-wrapper .sheet-fortyrhs { width: calc(40% - 9px) !important; }
+.charsheet .sheet-wrapper .sheet-fortyrhs { margin-right: 0; display: inline-block; vertical-align: top; }
+.charsheet .sheet-wrapper .sheet-twenty { width: calc(20% - 9px); display: inline-block; padding-right: 8px }
+.charsheet .sheet-wrapper .sheet-2colrow.sheet-boxes .sheet-col.sheet-sixty {
+    display: inline-block;
+    width: calc(60% - 6px) !important;
+    margin-right: 0;
+    margin-left: 3px !important;
+}
+.charsheet .sheet-wrapper .sheet-2colrow.sheet-boxes .sheet-col.sheet-forty .sheet-box,
+.charsheet .sheet-wrapper .sheet-2colrow.sheet-boxes .sheet-col.sheet-sixty .sheet-box {
+     margin-bottom: 0px;
+}
